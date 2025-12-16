@@ -57,4 +57,5 @@ COPY app.py /root/app.py
 WORKDIR /root
 
 # ---- 8. Start FastAPI ----
-CMD ["python", "app.py"]
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
+
